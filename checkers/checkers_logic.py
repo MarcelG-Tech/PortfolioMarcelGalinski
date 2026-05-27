@@ -62,7 +62,7 @@ class Board:
                     if moves:
                         all_captures.extend(moves)
         
-        # JEŚLI SĄ BICIA - zwracamy tylko najdłuższe (Twoja zasada bicia większościowego)
+        # JEŚLI SĄ BICIA - zwracamy tylko najdłuższe 
         if all_captures:
             max_len = max(len(m['captured']) for m in all_captures)
             return [m for m in all_captures if len(m['captured']) == max_len]
